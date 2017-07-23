@@ -8,13 +8,14 @@
     "start": "nodemon app/ --exec babel-node",
     "build": "babel app -d dist",
     "lint": "eslint ./app",
-    "test": "npm run lint && npm run mocha",
+    "test": "jest",
     "prod": "npm run build && node dist/",
     "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill"
   },
   "dependencies": {
     "babel": "^6.23.0",
     "glob": "^7.1.2",
+    "jest": "^20.0.4",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.0.1",

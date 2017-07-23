@@ -6,10 +6,10 @@ class CitiesControllers {
   async find(ctx){
       ctx.body = await function(){
 
-      return {
-        "mission":"Say Hello World"
-      };
-    }
+        return {
+          "mission":"Say Hello World"
+        };
+      }
   }
 }
 

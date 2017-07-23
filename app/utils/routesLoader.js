@@ -5,7 +5,11 @@ export default function (dirname) {
   return new Promise(function(resolve, reject) {
 
     const routes = []
-    glob(`${dirname}/*`, {
+    /**
+     * glob function helps find a pattern matched files.
+     * (regex, option, cb- callback)
+     */
+    glob(`${dirname}/*`,{
       ignore: '**/index.js',
     }, (err, files) => {
 
@@ -17,6 +21,7 @@ export default function (dirname) {
         const path = require(file);
         routes.push(path);
       });
+      console.log(routes);
       return resolve(routes);
     });
   });

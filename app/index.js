@@ -2,7 +2,7 @@ import bodyParser from 'koa-bodyparser'
 import Koa from 'koa'
 import logger from 'koa-logger'
 import routing from './routes/'
-import {port, connexionString } from './config/config'
+import {port, connexionString } from './config'
 
 const app = new Koa();
 
