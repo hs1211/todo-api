@@ -20,8 +20,9 @@ export default function (dirname) {
       files.forEach((file) => {
         const path = require(file);
         routes.push(path);
+        //console.log(`url ${JSON.stringify(path)}`);
       });
-      console.log(routes);
+  
       return resolve(routes);
     });
   });

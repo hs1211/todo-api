@@ -1,14 +1,16 @@
 import bodyParser from 'koa-bodyparser'
 import Koa from 'koa'
 import logger from 'koa-logger'
-import routing from './routes/'
+import routing from './routes/index'
 import {port, connexionString } from './config'
 
 const app = new Koa();
 
 app
   .use(logger())
-  .use(bodyParser());
+  .use(bodyParser({
+    urlencoded: true
+}));
 
 routing(app);
 
